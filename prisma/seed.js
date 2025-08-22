@@ -84,7 +84,7 @@ async function main() {
   const linkItems = [
     {
       slug: "instagram",
-      logoUrl: "/logo/Links/instagram-logo.png",
+      logoUrl: "instagram-logo.png",
       backgroundCss:
         "linear-gradient(45deg,#feda75 0%,#fa7e1e 25%,#d62976  50%,#962fbf  75%,#4f5bd5  100%)",
       textColor: "#ffffff",
@@ -95,7 +95,7 @@ async function main() {
     },
     {
       slug: "github",
-      logoUrl: "/logo/Links/github.png",
+      logoUrl: "github.png",
       backgroundCss: "linear-gradient(to bottom, #302F34, #1A191C)", // vertical gradient
       textColor: "#ffffff",
       label: "گیت‌هاب",
@@ -105,7 +105,7 @@ async function main() {
     },
     {
       slug: "ita",
-      logoUrl: "/logo/Links/ITA-logo.png",
+      logoUrl: "ITA-logo.png",
       backgroundCss: "linear-gradient(to bottom, #E58025, #F0422A)", // vertical gradient
       textColor: "#ffffff",
       label: "ایتا",
@@ -115,7 +115,7 @@ async function main() {
     },
     {
       slug: "linkedin",
-      logoUrl: "/logo/Links/linked-in.png",
+      logoUrl: "linked-in.png",
       backgroundCss: "linear-gradient(to bottom, #3C75C6, #144589)", // vertical gradient
       textColor: "#ffffff",
       label: "لینکدین",
@@ -125,7 +125,7 @@ async function main() {
     },
     {
       slug: "telegram",
-      logoUrl: "/logo/Links/telegram.png",
+      logoUrl: "telegram.png",
       backgroundCss: "#0088cc",
       textColor: "#ffffff",
       label: "تلگرام",
@@ -135,7 +135,7 @@ async function main() {
     },
     {
       slug: "whatsapp",
-      logoUrl: "/logo/Links/WhatsApp.webp",
+      logoUrl: "WhatsApp.webp",
       backgroundCss: "#25D366",
       textColor: "#ffffff",
       label: "واتساپ",

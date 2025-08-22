@@ -94,7 +94,7 @@ export default async function Home() {
                 >
                   <div className="image-icon h-16 w-16 flex-shrink-0 md:h-20 md:w-20">
                     <Image
-                      src={logoSrc}
+                      src={`/logo/Links/${logoSrc}`}
                       alt={link.label || "Link Icon"}
                       width={96}
                       height={96}
