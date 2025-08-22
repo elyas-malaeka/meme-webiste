@@ -3,10 +3,57 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
+}
+
+
+model Link {
+  id            Int      @id @default(autoincrement())
+  slug          String   @unique   // ✅ unique identifier for upsert
+  username      String
+  logoUrl       String
+  backgroundCss String
+  textColor     String
+  label         String
+  targetUrl     String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+
+/// Media items: images or videos with metadata
+model MediaItem {
+  id            Int      @id @default(autoincrement())
+  slug          String   @unique                            // SEO-friendly path
+  src           String?                                   // Optional image
+  description   String?                                   // Caption or description
+  author        String?                                   // Creator/author name
+  likes         Int      @default(0)
+  shares        Int      @default(0)
+  views         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+/// About Us: consolidated content
+model AboutUs {
+  id            Int      @id @default(autoincrement())
+  description   String                                    // Introductory paragraph
+  overviewLabel      String?                                   // Detailed overview
+  overviewContent    Int?                                   // Full overview content
+  statisticsLabel    String?                                     // Key/value metrics, e.g. { "users": 1000 }
+  statisticsContent  Int?                                   // JSON string for key/value pairs
+  siteInfoLabel      String?                                   // Site launch/details
+  siteInfoContent    Int?                                   // Additional information
+}
+
+/// Creator support links
+model Support {
+  id            Int      @id @default(autoincrement())
+  creatorName   String   @map("support_creator")          // Name of the creator
+  supportUrl    String                                    // URL for donations or contact
 }
