@@ -10,6 +10,18 @@ export const metadata: Metadata = {
     "بهترین مجموعه میم‌های شیعه، لحظات خنده‌دار و آموزنده مذهبی برای همه‌ی دوستداران طنز و فرهنگ شیعی.",
 };
 
+export async function generateStaticParams() {
+  // Fetch all slugs from the database
+  const items = await prisma.mediaItem.findMany({
+    select: { slug: true },
+  });
+
+  // Return as array of objects
+  return items.map((item) => ({
+    slug: item.slug,
+  }));
+}
+
 export default async function Page({
   params,
 }: {

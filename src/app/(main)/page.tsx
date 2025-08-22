@@ -99,8 +99,6 @@ export default async function Home() {
                       width={96}
                       height={96}
                       className="h-full w-full object-contain"
-                      // If logoSrc are external, consider configuring next.config.js domains or use `unoptimized`
-                      unoptimized={false}
                     />
                   </div>
 
